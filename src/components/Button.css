@@ -1,0 +1,100 @@
+.btn {
+  padding: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: var(--surface);
+  color: var(--text-primary);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn:hover {
+  background: var(--surface-light);
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 6px 12px rgba(0, 0, 0, 0.15),
+    0 0 20px rgba(99, 102, 241, 0.2);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Number buttons - default styling */
+.btn-number {
+  background: linear-gradient(135deg, #334155 0%, #475569 100%);
+}
+
+.btn-number:hover {
+  background: linear-gradient(135deg, #475569 0%, #64748b 100%);
+}
+
+/* Operator buttons */
+.btn-operator {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  color: #fff;
+  border-color: var(--primary-dark);
+}
+
+.btn-operator:hover {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, #4338ca 100%);
+  box-shadow: 
+    0 6px 12px rgba(0, 0, 0, 0.15),
+    0 0 30px rgba(99, 102, 241, 0.4);
+}
+
+/* Action buttons (C, ⌫, %) */
+.btn-action {
+  background: linear-gradient(135deg, #64748b 0%, #475569 100%);
+}
+
+.btn-action:hover {
+  background: linear-gradient(135deg, #748184 0%, #64748b 100%);
+}
+
+/* Equals button */
+.btn-equals {
+  background: linear-gradient(135deg, var(--success-color) 0%, #16a34a 100%);
+  color: #fff;
+  border-color: #16a34a;
+  grid-column: span 1;
+}
+
+.btn-equals:hover {
+  background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+  box-shadow: 
+    0 6px 12px rgba(0, 0, 0, 0.15),
+    0 0 30px rgba(34, 197, 94, 0.4);
+}
+
+/* Responsive button sizing */
+@media (max-width: 600px) {
+  .btn {
+    padding: 14px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .btn {
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+  }
+}
+
+/* Focus state for accessibility */
+.btn:focus {
+  outline: none;
+  box-shadow: 
+    0 6px 12px rgba(0, 0, 0, 0.15),
+    0 0 20px rgba(99, 102, 241, 0.3);
+}

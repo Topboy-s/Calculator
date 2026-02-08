@@ -1,0 +1,50 @@
+.display {
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.2) inset,
+    0 1px 0 rgba(255, 255, 255, 0.1) inset;
+}
+
+.display-expression {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  text-align: right;
+  min-height: 1.25rem;
+  margin-bottom: 8px;
+  word-wrap: break-word;
+  word-break: break-all;
+  letter-spacing: 0.03em;
+}
+
+.display-value {
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: right;
+  color: var(--text-primary);
+  word-wrap: break-word;
+  word-break: break-all;
+  min-height: 4rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 600px) {
+  .display-value {
+    font-size: 2.5rem;
+    min-height: 3.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .display-value {
+    font-size: 2rem;
+    min-height: 3rem;
+  }
+}
